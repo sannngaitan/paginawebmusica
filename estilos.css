@@ -2,6 +2,66 @@ body {
     background-color: #2e2e2e;
 }
 
+.playlist {
+  margin: 1rem 0;
+}
+.playlist ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.playlist li {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.playlist li:hover,
+.playlist li.active {
+  background-color: #444;
+}
+
+.artist-profile {
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.artist-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+.artist-meta h2 {
+  margin: 0 0 0.25rem 0;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+}
+.play-artist-btn {
+  background-color: #683475;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+.play-artist-btn:hover {
+  background-color: #683480;
+}
+
 
 .navbar {
   border-radius: 30px;
@@ -140,7 +200,7 @@ body {
 
 #progress::-webkit-slider-runnable-track {
   height: 4px;
-  background: #2e2e2e; /* un poco más claro que el fondo */
+  background: #2e2e2e; 
   border-radius: 2px;
 }
 
@@ -157,7 +217,6 @@ body {
   outline: none;
 }
 
-/* Ajustes de la barra de progreso y tiempo */
 .progress-container {
   flex: 1;
   display: flex;
@@ -167,10 +226,9 @@ body {
 
 #progress {
   flex: 1;
-  max-width: 400px;       /* ancho máximo razonable */
-  -webkit-appearance: none;
+  max-width: 400px;     
   background: transparent;
-  margin-right: 0.75rem;  /* espacio con los tiempos */
+  margin-right: 0.75rem;
 }
 
 #progress::-webkit-slider-runnable-track {
@@ -197,4 +255,84 @@ body {
   font-family: "Oswald", sans-serif;
   font-size: 0.875rem;
   white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem;
+  }
+  .navbar-left {
+    margin-bottom: 0.5rem;
+  }
+  .site-name {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0;
+  }
+  .search-form {
+    width: 100%;
+  }
+  .search-form input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .search-form button {
+    padding: 0.5rem;
+  }
+
+  .playlist {
+    margin-bottom: 0.75rem;
+  }
+  .playlist li {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .player-bar {
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .track-info {
+    flex: 1 1 100%;
+    margin-bottom: 0.5rem;
+  }
+  .track-art {
+    width: 40px;
+    height: 40px;
+  }
+  .track-meta .track-title {
+    font-size: 0.95rem;
+  }
+  .track-meta .track-artist {
+    font-size: 0.8rem;
+  }
+
+  .controls {
+    flex: 1 1 auto;
+    margin: 0.5rem 0;
+    justify-content: center;
+    width: 100%;
+  }
+  .controls button svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .progress-container {
+    flex: 1 1 100%;
+    margin: 0.5rem 0 0;
+  }
+  #progress {
+    max-width: none;
+    margin-right: 0.5rem;
+  }
+  .time-display {
+    font-size: 0.75rem;
+  }
 }
