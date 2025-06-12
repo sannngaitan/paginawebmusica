@@ -6,6 +6,86 @@ body {
     margin: 0;
 }
 
+.navbar {
+  border-radius: 30px;
+  position: sticky;
+  top: 0;
+  background-color: #683475;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.site-name {
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 3px;
+  margin-left: 1rem;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form input[type="text"] {
+  background-color: #fff;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  color: #fff;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-form input[type="text"]::placeholder {
+  color: #bbb;
+}
+
+.search-form button {
+  background-color: #333;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.search-form button svg {
+  fill: #fff;
+}
+
+.search-form button:hover {
+  background-color: #444;
+}
+
+.player-bar {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  background-color: #683475; 
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -61,7 +141,7 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     color: #9c27b0;
-    position: center;
+    position: relative;
     display: inline-block;
 }
 
